@@ -1,0 +1,43 @@
+{
+    "firstName": "text", 
+    "lastName": "text", 
+    "phone": "phone", 
+    "email": "email", 
+    "profile": "textarea",
+    "education": [
+        {
+            "institution": "text", 
+            "major":"text",
+            "dates": {
+                "start": "date", 
+                "end" : "date"
+            },
+            "description": "textarea"
+        }
+    ],
+    "work": [
+        {
+            "company": "text", 
+            "jobTitle":"text",
+            "dates": {
+                "start": "date", 
+                "end" : "date"
+            },
+            "description": "textarea"
+        }
+    ], 
+    "skills": [
+        {
+            "description": "textarea"
+        }
+    ], 
+    "references":[
+        {
+            "refName": "text", 
+            "refType": "radio button",
+            "institution": "text", 
+            "phone": "phone", 
+            "email": "email"
+        }
+    ]
+}
