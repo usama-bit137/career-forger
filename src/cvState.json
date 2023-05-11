@@ -1,43 +1,45 @@
 {
-    "firstName": "text", 
-    "lastName": "text", 
-    "phone": "phone", 
-    "email": "email", 
-    "profile": "textarea",
+    "firstName": "", 
+    "lastName": "", 
+    "phone": "", 
+    "email": "", 
+    "profile": "",
     "education": [
         {
-            "institution": "text", 
-            "major":"text",
+            "key":"",
+            "institution": "", 
+            "major":"",
             "dates": {
-                "start": "date", 
-                "end" : "date"
+                "start": "", 
+                "end" : ""
             },
-            "description": "textarea"
+            "description": ""
         }
     ],
     "work": [
         {
-            "company": "text", 
-            "jobTitle":"text",
+            "key": "1", 
+            "company": "", 
+            "jobTitle":"",
             "dates": {
-                "start": "date", 
-                "end" : "date"
+                "start": "", 
+                "end" : ""
             },
-            "description": "textarea"
+            "description": ""
         }
     ], 
     "skills": [
         {
-            "description": "textarea"
+            "description": ""
         }
     ], 
     "references":[
         {
-            "refName": "text", 
+            "refName": "", 
             "refType": "radio button",
-            "institution": "text", 
-            "phone": "phone", 
-            "email": "email"
+            "institution": "", 
+            "phone": "", 
+            "email": ""
         }
     ]
 }
