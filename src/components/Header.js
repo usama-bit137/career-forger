@@ -17,9 +17,6 @@ export default class Header extends Component {
                 <section className="header--title">
                     CareerForge
                 </section>
-                <p>
-                    React Project by Usama Aqeel
-                </p>
             </header>
         )
     }
