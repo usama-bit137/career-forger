@@ -1,5 +1,8 @@
 import React, { Component } from "react"
 import "../styles/Form.css"
+
+const formState = require("../cvState.json")
+console.log(formState.firstName);
 export default class Form extends Component {
     constructor(props) {
         super(props)
