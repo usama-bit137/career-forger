@@ -1,4 +1,30 @@
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-VariableFont_wght.ttf") format(truetype);
+}
+
 .cv-render {
-    /* border: 1px solid red; */
-    margin-left: 20px;
+    max-width: 500px;
+    min-width: 500px;
+    margin: 50px 0;
+    border: 1px solid black;
+    font-family: "Karla", sans-serif;
+    padding: 50px;
+    background-color: white;
+}
+.education-major {
+    font-weight: normal;
+}
+
+.name {
+    text-align: center;
+}
+
+.description {
+    letter-spacing: 1px;
+}
+
+.dates {
+    font-weight: bold;
+    padding-bottom: 10px;
 }
