@@ -1,113 +1,81 @@
 import React, { Component } from "react"
+import Experience from "./Experience";
 import "../styles/Form.css"
 
 export default class Form extends Component {
     constructor(props) {
         super(props)
         this.handleChange = this.props.handleChange.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
-
-    print = () => {
-        console.log(this.props.item.firstName)
+    
+    handleSubmit(event) {
+        event.preventDefault()
+        console.log("Somone tried to submit")
     }
 
     render() {
         return (
-            <div className="form">
-                <input 
-                    type="text" 
-                    placeholder="First Name" 
-                    name="firstName" 
-                    value={this.props.item.firstName} 
-                    onChange={this.handleChange}
-                />
-                <input 
-                    type="text" 
-                    placeholder="Last Name" 
-                    name="lastName" 
-                    value={this.props.item.lastName} 
-                    onChange={this.handleChange}
-                />
-                <input 
-                    type="text" 
-                    placeholder="Phone Number"
-                    name="phone" 
-                    value={this.props.item.phone} 
-                    onChange={this.handleChange}
-                />
-                <input 
-                    type="email" 
-                    placeholder="Email"
-                    name="email" 
-                    value={this.props.item.email} 
-                    onChange={this.handleChange}
-                />
-                
-                {/* <textarea placeholder="Profile"/>
-                
-                <fieldset>
-                    <p>Education</p>
-                    <input placeholder="Institution"/>
-                    <input placeholder="Major"/>
-                    <fieldset>
-                        <p>Dates</p>
-                        <label>
-                            From <input type="date"/>
-                        </label>
-                        <label>
-                            Until <input type="date"/>
-                        </label>
-                    </fieldset>
-                    <textarea placeholder="Description"/>
-                </fieldset>
-                
-                <fieldset>
-                    <p>Work</p>
-                    <input placeholder="Company"/>
-                    <input placeholder="Major"/>
-                    <fieldset>
-                        <p>Dates</p>
-                        <label>
-                            From <input type="date"/>
-                        </label>
-                        <label>
-                            Until <input type="date"/>
-                        </label>  
-                    </fieldset>
-                    <textarea placeholder="Description"/>    
-                </fieldset>
-                
-                <fieldset>
-                    <p>Skills</p>
-                    <input placeholder="Skill"/>
-                </fieldset>
-            
-                <fieldset>
-                    <p>References</p>
-                    <input placeholder="Name"/>
-                    <fieldset>
-                        <label>
-                            <input placeholder="Major" type="radio" value="Academic" name="referencetype"/>
-                            Academic
-                        </label>
-                        <br/>
-                        <label>
-                            <input placeholder="Major" type="radio" value="Work" name="referencetype"/>
-                            Work
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <p>Dates</p>
-                        <label>
-                            From <input type="date"/>
-                        </label>
-                        <label>
-                            Until <input type="date"/>
-                        </label>  
-                    </fieldset>
-                    <textarea placeholder="Description"/>    
-                </fieldset> */}
-            </div>
+            <form className = "form" name="form" onSubmit={this.handleSubmit}> 
+                <h1 className="call-to-action">Your Path to Professional Success Starts Here!</h1>
+                <h4 className="call-to-action">Enter your details below:</h4>
+                <p className="title">PERSONAL DETAILS</p>
+                <form className="personal-form" name="personal">
+                    <input 
+                        type="text" 
+                        placeholder="First Name" 
+                        name="firstName" 
+                        value={this.props.personal.firstName} 
+                        onChange={this.handleChange}
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Last Name" 
+                        name="lastName" 
+                        value={this.props.personal.lastName} 
+                        onChange={this.handleChange}
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Phone Number"
+                        name="phone" 
+                        value={this.props.personal.phone} 
+                        onChange={this.handleChange}
+                    />
+                    <input 
+                        type="email" 
+                        placeholder="Email"
+                        name="email" 
+                        value={this.props.personal.email} 
+                        onChange={this.handleChange}
+                    />
+                    
+                    <textarea 
+                        placeholder="Profile"
+                        value={this.props.personal.profile}
+                        name="profile"
+                        onChange={this.handleChange}
+                    />
+                </form>
+                <p className="title">EDUCATION</p>
+                <form className="education-form">
+                    <Experience 
+                        parentName = "education"
+                        place = "institution"
+                        what = "major"
+                        handleChange = {this.handleChange}
+                        item = {this.props.education}
+                    />
+                </form>
+                {/* <Experience 
+                        parentName = "work"
+                        place = "company"
+                        what = "jobTitle"
+                        handleChange = {this.handleChange}
+                        item = {this.props.work}
+                    /> */}
+                    <button>Submit Template</button>
+            </form>
         )
     }
 }
