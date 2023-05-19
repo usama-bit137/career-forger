@@ -3,10 +3,6 @@ import icon from "../icons/cv-image.png"
 import "../styles/Header.css"
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <header>
