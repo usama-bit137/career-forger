@@ -2,13 +2,14 @@
     font-family: "Valera Round";
     src: url(../fonts/VarelaRound-Regular.ttf) format(truetype);
 }
+
 header {
-    margin:0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
     background-color: white;
+    background: linear-gradient(to left, red, blue);
 }
 
 .header--title {
@@ -17,8 +18,5 @@ header {
     padding-left: 10px;
     margin-right: auto;
     font-family: "Valera Round";
-
-    background: -webkit-linear-gradient(red, rgb(42, 42, 243));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
 }
