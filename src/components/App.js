@@ -1,57 +1,53 @@
-import React, { Component } from "react"
-import '../styles/App.css';
-import Header from './Header'
-import Form from "./Form"
+import React, { useState } from "react";
+import "../styles/App.css";
+import Header from "./Header";
+import Form from "./Form";
 import Render from "./Render";
-import Footer from "./Footer"
-import cvState from "../cvState.js"
+import Footer from "./Footer";
+import cvState from "../cvState.js";
 
-export default class App extends Component {
-  constructor() {
-    super()
+export default function App() {
+  const [fields, setFields] = useState(cvState);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    this.state = cvState;  
-  }
-  
-  handleChange = (e) => {
-    const {name, value, parentElement} = e.target, 
-          parentName = parentElement.name
-    
-    if (parentName === "education" || "work"){
-      this.setState({
-        ...this.state,
-        [parentName]: {
-          ...this.state[parentName],
-          [name]: value
-        } 
-      })
-    } else if (parentName === "personal") {
-      this.setState({
-          ...this.state, 
-          [name]: value
-      })
-    }
-    console.log(this.state)
-  }
+  const handleChange = (e) => {
+    const { name, value, parentElement } = e.target,
+      parentName = parentElement.name;
 
-  render() {
-    return (
-      <>
-        <Header />
-        
-        <div className="container">
-          <Form 
-            personal={this.state.personal}
-            education={this.state.education}
-            handleChange={this.handleChange}
-          />
-          <Render
-            personal={this.state.personal}
-            education={this.state.education}
-          />
-        </div>
-        <Footer />
-      </>
-    )
-  }
+    setFields({
+      ...fields,
+      [parentName]: {
+        ...fields[parentName],
+        [name]: value,
+      },
+    });
+  };
+
+  return (
+    <main className="main">
+      <Header />
+      {!isSubmitted ? (
+        <Form
+          personal={fields.personal}
+          education={fields.education}
+          handleChange={handleChange}
+          isSubmitted={isSubmitted}
+          setIsSubmitted={setIsSubmitted}
+        />
+      ) : (
+        <>
+          <button
+            className="back-button"
+            onClick={() => {
+              setIsSubmitted((isSubmitted) => !isSubmitted);
+            }}
+          >
+            Back
+          </button>
+          <Render personal={fields.personal} education={fields.education} />
+        </>
+      )}
+      <Footer />
+    </main>
+  );
 }
