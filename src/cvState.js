@@ -1,32 +1,40 @@
 let cvState = {
-    "personal" : {
-        "firstName": "Jim Bob", 
-        "lastName": "Sherman", 
-        "phone": "+44 7659 903428", 
-        "email": "jimbob.sherman@email.com", 
-        "profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum dui ac venenatis vulputate. In ornare pellentesque ante, ac ultrices lorem semper vitae. Sed hendrerit, elit quis eleifend finibus, est magna viverra risus, nec pulvinar ligula leo quis tellus. Pellentesque facilisis nulla ac velit sagittis ullamcorper."
+  personal: {
+    firstName: "Jim Bob",
+    lastName: "Sherman",
+    phone: "+44 7659 903428",
+    email: "jimbob.sherman@email.com",
+    profile:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum dui ac venenatis vulputate. In ornare pellentesque ante, ac ultrices lorem semper vitae. Sed hendrerit, elit quis eleifend finibus, est magna viverra risus, nec pulvinar ligula leo quis tellus. Pellentesque facilisis nulla ac velit sagittis ullamcorper.",
+  },
+  education: [
+    {
+      id: 0,
+      institution: "",
+      major: "",
+      start: "",
+      end: "",
+      description: "",
     },
-    "education": {
-        "institution": "University College Plebdon", 
-        "major": "Plebiology with Plebiometry",
-        "start": "20/05/2004", 
-        "end" : "20/05/2007",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum dui ac venenatis vulputate. In ornare pellentesque ante, ac ultrices lorem semper vitae. Sed hendrerit, elit quis eleifend finibus, est magna viverra risus, nec pulvinar ligula leo quis tellus. Pellentesque facilisis nulla ac velit sagittis ullamcorper. "
+  ],
+
+  work: [
+    {
+      id: 0,
+      company: "",
+      jobTitle: "",
+      start: "",
+      end: "",
+      description: "",
     },
-    "work": { 
-        "company": "", 
-        "jobTitle":"",
-        "start": "", 
-        "end" : "",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum dui ac venenatis vulputate. In ornare pellentesque ante, ac ultrices lorem semper vitae. Sed hendrerit, elit quis eleifend finibus, est magna viverra risus, nec pulvinar ligula leo quis tellus. Pellentesque facilisis nulla ac velit sagittis ullamcorper."
-    },
-    "skills": ["",""],
-    "references":{
-        "refName": "", 
-        "refType": "radio button",
-        "institution": "", 
-        "phone": "", 
-        "email": ""
-    }
-}
+  ],
+  skills: ["", ""],
+  references: {
+    refName: "",
+    refType: "radio button",
+    institution: "",
+    phone: "",
+    email: "",
+  },
+};
 module.exports = cvState;
