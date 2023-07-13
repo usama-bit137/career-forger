@@ -1,30 +1,25 @@
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center; 
-    padding: 0; 
-    margin-top: 10px; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .footer-text {
-    background-color: grey;
-    color: white;
-    margin: 0; 
-    padding: 10px;
-    font-size: 20px;
+  background: linear-gradient(to left, blue, red);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .git-link {
-    color: white; 
-    padding-left: 2px;
-    padding: 5px;
-    margin-right: auto;
-}
-
-.git-logo {
-    text-align: center;
-    margin-left: 10px;
+  color: white;
+  padding-left: 2px;
+  padding: 5px;
+  margin-right: auto;
 }
