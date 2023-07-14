@@ -24,14 +24,13 @@ export default function App() {
   };
 
   return (
-    <main className="main">
+    <>
       <Header />
       {!isSubmitted ? (
         <Form
           personal={fields.personal}
           education={fields.education}
           handleChange={handleChange}
-          isSubmitted={isSubmitted}
           setIsSubmitted={setIsSubmitted}
         />
       ) : (
@@ -48,6 +47,6 @@ export default function App() {
         </>
       )}
       <Footer />
-    </main>
+    </>
   );
 }
