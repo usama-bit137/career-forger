@@ -1,15 +1,13 @@
 .form {
-  min-width: 250px;
-  max-width: 500px;
+  width: 70vw;
   flex-grow: 1;
-  margin: 50px auto;
+  margin: 5% auto 50px auto;
   padding: 25px;
   background-color: rgb(32, 33, 36);
   color: rgb(205, 205, 205);
   border-radius: 5px;
   font-family: "Valera Round";
   align-items: center;
-  position: absolute;
 }
 
 input,
@@ -24,7 +22,7 @@ textarea {
 }
 
 textarea {
-  max-width: 80%;
+  width: 80%;
   min-height: 150px;
 }
 
@@ -41,7 +39,7 @@ input {
 
 .create-button {
   position: relative;
-  left: 50%;
+  left: 30%;
   border: 0;
   padding: 10px;
   border-radius: 1px;
