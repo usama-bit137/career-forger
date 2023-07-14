@@ -6,14 +6,12 @@ export default function Form({
   personal,
   education,
   handleChange,
-  isSubmitted,
   setIsSubmitted,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log("Somone tried to submit");
-    setIsSubmitted((isSubmitted) => !isSubmitted);
-    console.log(isSubmitted);
+    setIsSubmitted((is) => !is);
   }
 
   function educationAdd() {
